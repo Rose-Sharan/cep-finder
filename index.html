@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/iconblue.png">
+    <!-- Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin="">
+    </script>
+    <!--------->
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img class="header_logo" src="img/iconblue.png" alt="">
+            <h2><span class="color_text">CEP Finder</span></h2>
+        </div>
+        
+    </div>
+    <div class="content">
+        
+        <div class="content_left">
+            <h1 class="title">Search Your <span class="color_text">Postal Code</span> For Free</h1>
+            <p class="subtitle">Explore our CEP Finder website.<br>a platform for easy and free postal code searches.</p>
+            
+            <div class="buttons">
+                <a href="#part2"><button id="button1">How it Works</button></a>
+                <a href="#projects"><button id="button2">Other projects</button></a>
+            </div>            
+        </div>
+
+        <div class="content_right">
+            <div class="info">
+                <div class="result">
+                  <div id="printCity"></div>
+                  <div id="printAddress"></div>
+                  <div id="printDistrict"></div>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div class="overlay">
+                <input type="number" inputmode="numeric" name="text" id="cepinput" class="input" placeholder="Type Your Postal Code">
+                <button id="button3" onclick="fetchcep()" class="button">Submit</button>
+            </div>
+    </div>
+        
+    </div>
+    
+
+    <div id="part1" class="part1">
+        <div class="title_pt1">
+            <h1>Project Overview</h1>
+        </div>
+        <p class="posub">The CEP Finder is a user-friendly web application meticulously crafted to assist users in effortlessly accessing location data through Brazilian postal codes, commonly referred to as CEP (Código de Endereçamento Postal). This innovative project is meticulously implemented using a harmonious blend of JavaScript, HTML, and CSS, harnessing the formidable power of the Fetch API for seamless data retrieval.</p>
+    </div>
+
+    <h1>How it works</h1>
+
+    <div id="part2" class="part2">
+        <div class="up">
+        
+            <div class="txt">
+                <div class="number">
+                    <b class="number">1</b>
+                </div>
+                <p> The process begins when a user accesses the "CEP Finder" web page using their web browser. This web page is designed to help users find information related to Brazilian postal codes (CEP).</p>
+        
+            </div>
+        
+            <div class="txt">
+                <div class="number">
+                    <b class="number">2</b>
+                </div>
+                <p>They are presented with an input field where they can enter a Brazilian postal code (CEP).</p>
+        
+            </div>
+    
+        </div>
+        <div class="midle">
+            <div class="txt">
+                <div class="number">
+                    <b class="number">3</b>
+                </div>
+                <p> After entering a valid CEP and submitting the form, the application triggers a Fetch API request to a backend service or API that handles CEP data retrieval.</p>
+        
+            </div>
+            <div class="txt">
+                <div class="number">
+                    <b class="number">4</b>
+                </div>
+                <p> The backend service processes the request and returns information related to the entered CEP.</p>
+        
+            </div>
+            
+        </div>
+        <div class="down">
+        
+        
+            <div class="txt">
+                <div class="number">
+                    <b class="number">5</b>
+                </div>
+                <p> The JavaScript code in the application receives this data and dynamically updates the webpage to display the fetched information, including the address details.</p>
+        
+            </div>
+        
+            <div class="txt">
+                <div class="number">
+                    <b class="number">6</b>
+                </div> 
+               <p> If any errors occur during the process, the application provides appropriate feedback to the user.</p>
+        
+            </div>
+        </div>
+
+    </div>
+    <div id="part3" class="part3"></div>
+    <h1 id="projects">Other projects</h1>
+    <div class="projects">
+        <div class="box1">
+            <a style="text-decoration: none;" href="https://brunomozer05.github.io/faltometro/">
+                <h1 class="project1">Faltometro</h1>
+            </a>
+        </div>
+        <div class="box2">
+            <a href="https://brunomozer05.github.io/currency-converter/">
+                <img class="img" src="https://raw.githubusercontent.com/brunomozer05/currency-converter/main/img/icon.png" alt="">
+            </a>
+        </div>
+        <div class="box3">
+            <a href="https://brunomozer05.github.io/gas-tracker/">
+                <img class="img" src="https://raw.githubusercontent.com/brunomozer05/gas-tracker/main/img/icon.png" alt="">
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <p class="copyright">Copyright © 2023 Bruno Mozer. All Rights Reserved.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
